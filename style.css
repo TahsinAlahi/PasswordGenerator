@@ -1,0 +1,167 @@
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(3, 2, 70, 0.895);
+  font-size: 1.25rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 80px 0 80px;
+  color: rgb(216, 216, 216);
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 125px;
+  gap: 150px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.left p.text {
+  font-size: 0.7em;
+}
+
+.left .password-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.left #password {
+  height: 2rem;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px 10px;
+  outline: none;
+}
+
+.left .copy {
+  display: flex;
+  align-items: center;
+  margin: 2px 0 2px 9px;
+  padding: 0 10px;
+  line-height: 1;
+  border-radius: 50%;
+  background-color: white;
+  color: rgb(1, 125, 1);
+  cursor: pointer;
+}
+
+.left .generate-btn {
+  width: 40%;
+  padding: 20px 0;
+  background-color: rgb(1, 125, 1);
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.right .password-length .text {
+  margin-right: 10px;
+}
+
+.right .password-length {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.right .password-length #length {
+  padding: 0 10px;
+  font-size: 1em;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 0.3em;
+}
+
+/* Input errors */
+.right .error {
+  color: red;
+  font-size: 0.8em;
+  align-self: center;
+  display: none;
+}
+
+/* Removes the arrow of password length input box  */
+#length::-webkit-outer-spin-button,
+#length::-webkit-inner-spin-button,
+#length {
+  /* For google chrome and others */
+  -webkit-appearance: none;
+  margin: 0;
+  /* For firefox only */
+  -moz-appearance: textfield;
+}
+
+.right .choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+/* Made a custom checkbox */
+.right .choice input {
+  opacity: 0;
+  position: absolute;
+}
+
+.right .choice label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right .choice label:hover::before,
+.right .choice input:hover + label::before {
+  cursor: pointer;
+}
+
+.right .choice input:checked + label::before {
+  content: "\2713";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(1, 125, 1);
+  font-weight: 900;
+}
+
+.right .choice label::before {
+  content: "";
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
+  border: 2px solid white;
+  border-radius: 0.3em;
+}
